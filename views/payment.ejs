@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    const request = require('request');
+
+const options = {
+  method: 'POST',
+  url: 'https://knit-pay-pro1.p.rapidapi.com/payments/success',
+  headers: {
+    'content-type': 'application/json',
+    'X-RapidAPI-Key': '2bc888e69dmsh07843b900b424d7p1c85bajsnd7f04313760d',
+    'X-RapidAPI-Host': 'knit-pay-pro1.p.rapidapi.com'
+  },
+  body: {
+    mode: 'live',
+    gateway: 'string',
+    payment_method: 'string',
+    source: 'rapidapi-test',
+    amount: '0',
+    currency: 'INR',
+    knitpay_version: '0.0.0.0',
+    website_url: 'https://rapidapi.com',
+    data: 'string'
+  },
+  json: true
+};
+
+request(options, function (error, response, body) {
+	if (error) throw new Error(error);
+
+	console.log(body);
+});
+</body>
+</html>

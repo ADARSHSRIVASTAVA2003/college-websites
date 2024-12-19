@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Information</title>
+    <link rel="stylesheet" href="stylesheets/adminstu.css">
+</head>
+<body>
+  
+<h3 class="head">Student Information</h3>
+
+<table border="1">
+    <tr>
+        <th>S.No</th>
+        <th>Name</th>
+        <th>Father Name</th>
+        <th>Course</th>
+        <th>Roll Number</th>
+        <th>Mobile Number</th>
+        <th>Action</th>
+    </tr>
+    <% let i = 1; %>
+    <% for (let student of courcestu) { %>
+    <tr>
+        <td><%= i++ %></td>
+        <td><%= student.Name %></td>
+        <td><%= student.FatherName %></td>
+        <td><%= student.course %></td>
+        <td><%= student.cuetregnumber %></td>
+        <td><%= student.MobileNumber %></td>
+        <td>
+            <form action="/stumarks/<%= student.cuetregnumber %>/<%= student.course %>" method="POST">
+                <button type="submit">View Results</button>
+            </form>
+        </td>
+    </tr>
+    <% } %>
+</table>
+
+</body>
+</html>

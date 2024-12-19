@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/stylesheets/form.css">
+</head>
+<body>
+  <form id="regForm" action="/form" method="post" enctype="multipart/form-data" >
+
+    <!-- <h1>Register:</h1> -->
+    
+    <!-- One "tab" for each step in the form: -->
+    <div class="tab">
+      <h1>
+        Personal Details
+      </h1>
+      <label for="name">
+        Cuet registration Number<input type="text" placeholder="Enter  your  name" id="name" name="cuetregnumber" value=" <%= user. cuetregnumber %>"  >
+       </label>
+      <label for="name">
+        name: <input type="text" placeholder="Enter  your  name" id="name" name="Name"  value="<%= user.Name %>" " >
+       </label>
+       <label for="add">
+        aadhar: <input type="number" placeholder="Enter  your addhar number" id="add" name="addhar" value="<%=user.addhar%>" >
+       </label>
+       <label for="mname">
+         Mother name: <input type="text" placeholder="Enter  your mother  name" id="mname" name="MotherName" value="<%=user.MotherName%>"  >
+        </label> 
+        <label for="fname">
+          Father name: <input type="text" placeholder="Enter  your Father name" id="fname" name="FatherName" value="<%=user.FatherName%>"  ">
+        </label>
+        <label for="email">
+          
+          E-Mail: <input type="email" placeholder="Enter  your  e-mail" id="email" name="email"  value="<%=user.email%>">
+        </label>
+        <label for="dob">
+          Date  of bith: <input type="date" placeholder="Enter  your  name" id="dob" name="DOB" value="<%=user.DOB%>"  " >
+        </label>
+        <label for="mobile">
+          Mobile Number: <input type="tel" placeholder="Enter  your  name" id="mobile" name="MobileNumber" value="<%=user.MobileNumber%>" >
+        </label>
+        <label for="p">
+          Upload your photo: <input type="file" placeholder="Enter  your  name" id="p" name="photo" >
+        </label>
+        <label for="A">
+          Upload your addhar: <input type="file" placeholder="Enter  your  name" id="A" name="addharphoto" >
+        </label>
+        <label for="gen">
+         Gender:
+         <select name="Gender" id="gen"  >
+           <option value="male">Male</option>
+           <option value="Female">Female</option>
+           <option value="others">Others</option>
+         </select> 
+         <br>
+        </label>
+    </div>
+    
+    <div class="tab">
+      <h1>RESIDENSAL DETAILS</h1>
+      <label for="city">
+        Village: <input type="text" id="city" placeholder="Enter your city" name="Village">
+      </label>
+      <label for="post">
+        post: <input type="text" id="post" placeholder="Enter your post" name="post">
+      </label>
+      <label for="dis">
+        District: <input type="text" id="dis" placeholder="Enter your District" name="District">
+      </label>
+      <label for="state">
+        state: <input type="text" id="state" placeholder="Enter your State" name="State">
+      </label>
+    </div>
+    
+    <div class="tab">
+    <h1>  Qualification:</h1>
+      <label for="hig">
+      Maximun  marks in class 10 :<input type="text" id="hid" placeholder="Maximun marks in class 10" name="mm10">
+      </label>
+      <label for="hig">
+      obtain maximum class marks in 10 :<input type="text" id="hid" placeholder="obtained marks in class 10" name="om10" value="<%=user.om10%>">
+      </label>
+      <label for="p10">
+        Upload your 10 marksheets: <input type="file" placeholder="Enter  your  name" id="p10" name="photo10" >
+      </label>
+      <label for="12">
+      Maximun  marks in class 12 :<input type="text" id="12" placeholder="Maximun marks in class 12" name="mm12">
+      </label>
+      <label for="o12">
+      obtain maximum class marks in 12:<input type="text" id="o12" placeholder="obtained marks in class 12" name="om12"  value="<%=user.om12%>">
+      </label>
+      <label for="p12">
+        Upload your 12 marksheets: <input type="file" placeholder="Enter  your  name" id="p12" name="photo12" >
+      </label>
+    </div>
+    
+    <div class="tab">
+     <h1>Course Selection</h1>
+     <label for="cars">Choose DEPARTMENT:</label>
+
+<select name="Department" id="cars">
+  <option value="Computer science">Computer science</option>
+  <option value="Information techology">Information techology</option>
+  <option value="FoodScience">FoodScience</option>
+  <option value="Pharmacy">Pharmacy</option>
+</select>
+
+<label for="course">Course:</label>
+
+<select name="course" id="cars">
+  <option value="B.C.A">B.C.A</option>
+  <option value="Bsc IT">Bsc IT</option>
+  <option value="Bsc Food science">Bsc Food science</option>
+  <option value="D-pharma">D-pharma</option>
+</select>
+<!-- <h1>payments</h1> -->
+    </div>
+    
+    <div style="overflow:auto;">
+      <div style="float:right;">
+        <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+        <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+      </div>
+    </div>
+    
+    <!-- Circles which indicates the steps of the form: -->
+    <div style="text-align:center;margin-top:40px;">
+      <span class="step"></span>
+      <span class="step"></span>
+      <span class="step"></span>
+      <span class="step"></span>
+    </div>
+    <script src="/javascripts/form.js"></script>
+</body>
+</html>

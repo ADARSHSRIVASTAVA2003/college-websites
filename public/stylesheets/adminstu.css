@@ -1,0 +1,20 @@
+table{
+    width: 100%;
+    /* color: aqua; */
+    background-color: aqua;
+}
+.student{
+    width: 100%;
+    /* color: aqua; */
+    background-color: aqua;
+}
+.head{
+    text-align: center;
+    font-size: 37px;
+}
+body{
+    background-color: antiquewhite;
+}
+table th{
+    background-color: blueviolet
+}

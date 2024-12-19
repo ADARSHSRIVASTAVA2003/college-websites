@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<link rel="stylesheet" href="stylesheets/profile.css">
+<body>
+  <main>
+    <!-- <img src="https://images.unsplash.com/photo-1534607287018-541c7d97748f?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MDg2MDY2ODF8&ixlib=rb-4.0.3&q=85" alt=""> -->
+    <img src="/images/add/uploads/<%= studentdata.photo %>" alt="">
+    <h1><%= studentdata.Name %></h1>
+    <h2>BABA SAHEB BHIM RAO AMBDIKAR UNIVERSITY</h2>
+    <p>A++ grade by NAAC</p>
+    <menu>
+     
+      <!-- %=chat.created_at.toString( ).split(" ")[4 ] %> -->
+      <li>Mother Name : <%=studentdata.MotherName%></li>
+      <li>Father Name : <%=studentdata.FatherName%></li>
+      <li>Date of Birth : <%=studentdata.DOB.toString().split(" ")[4]%></li>
+      <li>Deppartment : <%=studentdata.Department%></li>
+      <li> Course : <%=studentdata.course%></li>
+    </menu>
+  </main>
+</body>
+</html>

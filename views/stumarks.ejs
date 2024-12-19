@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/stumarks.css">
+</head>
+<body>
+    <div class="main">
+        <div class="imgs"><img src="/images/add/bbau.png" alt="img  loadded"></div>
+        <h1 class="head">BABA SAHEB BHIMRAO AMBEDKAR UNIVERSITY </h1>
+        <h3 class="head">A CENTRAL UNIVERSITY</h3>
+        <span class="detail">
+        <span class="personal">
+
+  Roll Number:<%=students.cuetregnumber%>  <br> 
+  Name:      <%= students.Name%> <br>
+  FatherName:<%=students.FatherName%> <br>
+  MotherName:<%=students.MotherName%> <br>
+  Department:<%=students.Department%>   <br>
+  Program:<%=students.course%>
+</span>    
+
+  <div class="photo"><img src="/images/add/uploads/<%= students.photo %>" alt="profile photo" height="100px" width="100px"></div>
+</span>
+
+
+
+<div class="marks">
+
+    <table border="1">
+        <caption>Update marks</caption>
+        <tr>
+            <th>S.Nu</th>
+            <th>Subject</th>
+            <th>Marks</th>
+        </tr>
+        <tr>
+            <form action="/updatemarks/<%=students.cuetregnumber%>" method="post">
+            <td>1</td>
+            <td>Subject 1</td>
+            <td><input type="number" name="subject1"></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Subject 3</td>
+            <td><input type="number" name="subject2"></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Subject 3</td>
+            <td><input type="number" name="subject3"></td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Subject 4</td>
+            <td><input type="number" name="subject4"></td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Subject 5</td>
+            <td><input type="number" name="subject5"></td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>Subject 6</td>
+            <td><input type="number" name="subject6"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td> <button>update</button></td>
+        </tr>
+    </form>
+    </table>
+</div>
+</div>
+</body>
+</html>
